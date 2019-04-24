@@ -11,23 +11,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background: gray;">
+<body background="https://images8.alphacoders.com/374/374852.jpg">
 
-  <div class="container">
+  <!--https://images8.alphacoders.com/374/374852.jpg-->
+  <div class="container-fluid" style="width:1200px">
 
-    <div class="jumbotron text-center" style="background: black;">
-      <h1 style="color:white;">Mission to Mars</h1>
-      <br>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    <br><br>
+    <div style="border: 1px solid white">
+    <h1 align="middle" style="color:white; font-size: 80px">Mission to Mars</h1>
+    <br>
+    <p align="middle"><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    <br>
     </div>
+    <br><br>
+    
 
 
       <!-- Title/Paragraph Description Latest Mars Data -->
     <div class="row">
         <div class="col-lg-12">
-          <h2>Latest Mars News</h2>
-          <h4>{{mars_data.title}}</h4>
-          <small>{{mars_data.paragraph_text}}</small>
+          <h2 style="color:white">Latest Mars News</h2>
+          <h4 style="color:white">{{mars_data.title}}</h4>
+          <p style="color:white">{{mars_data.paragraph_text}}</p>
         </div>
     </div>
 
@@ -35,37 +40,39 @@
     <br>
   
       <div class="row">
-          <div class="col-lg-8">
-            <h2>Featured Mars Image</h2>
+          <div style="border:2px solid white; padding-bottom: 20px;" class="col-lg-8">
+            <h2 style="color:white;">Featured Mars Image</h2>
             <img width=750 src="{{mars_data.featured_image_url}}" alt="">
           </div>
   
           <div class="col-lg-4">
-              <div style="border:1px solid white; padding:5px;">
-                <h4>Current Weather on Mars</h4>
-                <small>{{mars_data.mars_weather}}</small>
+              <div style="border:2px solid white; padding:8px; color:white;">
+                <h4 style="font-size:30px;">Current Weather on Mars</h4>
+                <p>{{mars_data.mars_weather}}</p>
               </div>
               <br>
-              <h4>Mars Facts</h4>
-              <small>{{mars_data.mars_facts_table|safe}}</small>
+              <div style="border:2px solid white; padding:8px;">
+              <h4 style="font-size:30px; color:white;">Mars Facts</h4>
+              <b style="font-size:13px;">{{mars_data.mars_facts_table|safe}}</b>
+              </div>
           </div>
       </div>
    
       <br><br>
   
-      <h2 align="middle" class="font">Mars Hemispheres</h2>
+      <h2 align="middle" style="font-size: 70px; color:white;">Mars Hemispheres</h2>
       <hr style="color:white;"></hr>
 
       <div class="row">
   
         <div class="col-lg-6">
-          <img width=500 src="{{mars_data.image_urls[0]['image_url']}}" alt="">
-          <div>{{mars_data.image_urls[0]['title']}}</div>
+          <img style="border: 2px solid white; padding:10px;" width=500 src="{{mars_data.image_urls[0]['image_url']}}" alt="">
+          <b style="font-size:27px; color:white;">{{mars_data.image_urls[0]['title']}}</b>
         </div>
   
         <div class="col-lg-6">
-            <img width=500 src="{{mars_data.image_urls[1]['image_url']}}" alt="">
-            <div>{{mars_data.image_urls[1]['title']}}</div>
+            <img style="border: 2px solid white; padding:10px;" width=500 src="{{mars_data.image_urls[1]['image_url']}}" alt="">
+            <b style="font-size:27px; color:white;">{{mars_data.image_urls[1]['title']}}</b>
         </div>
         
       </div>
@@ -75,13 +82,13 @@
       <div class="row">
   
           <div class="col-lg-6">
-            <img width=500 src="{{mars_data.image_urls[2]['image_url']}}" alt="">
-            <div>{{mars_data.image_urls[2]['title']}}</div>
+            <img style="border: 2px solid white; padding:10px;" width=500 src="{{mars_data.image_urls[2]['image_url']}}" alt="">
+            <b style="font-size:27px; color:white;">{{mars_data.image_urls[2]['title']}}</b>
           </div>
     
           <div class="col-lg-6">
-              <img width=500 src="{{mars_data.image_urls[3]['image_url']}}" alt="">
-              <div>{{mars_data.image_urls[3]['title']}}</div>
+              <img style="border: 2px solid white; padding:10px;" width=500 src="{{mars_data.image_urls[3]['image_url']}}" alt="">
+              <b style="font-size:27px; color:white;">{{mars_data.image_urls[3]['title']}}</b>
           </div>
           
       </div>
